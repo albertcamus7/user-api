@@ -1,25 +1,47 @@
-# User API – Spring Boot Project
+# 🚀 Spring Boot CRUD API - User Management
 
-A basic REST API to manage users using Spring Boot. This project supports CRUD operations.
+This is a basic Spring Boot REST API project for managing users. It demonstrates CRUD operations using:
+- `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`
+- `@RequestBody`, `@PathVariable`
+- Simple validation using `@NotBlank`, `@Email`, `@Valid`
+- Tested using Postman
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-src/
-└── main/
-└── java/
-└── com.example.demo_68/
-├── controller/
-│ └── UserController.java
-├── model/
+src
+└── main
+├── java
+│ └── com.example.demo_68
+│ ├── controller
+│ │ └── UserController.java
+│ └── model
 │ └── UserDto.java
-├── repository/
-└── Demo68Application.java
+└── resources
+└── application.properties
+
+yaml
+Copy
+Edit
 
 ---
 
-## 🚀 How to Run
+## 🔧 API Endpoints
 
-```bash
-./mvnw spring-boot:run
+| Method | Endpoint       | Description            |
+|--------|----------------|------------------------|
+| GET    | `/users/{id}`  | Get a user by ID       |
+| POST   | `/users`       | Create a new user      |
+| PUT    | `/users/{id}`  | Update user by ID      |
+| DELETE | `/users/{id}`  | Delete user by ID      |
+
+---
+
+## 🧪 Sample POST Request Body
+
+```json
+{
+  "name": "Sayan",
+  "email": "sayan@example.com"
+}
